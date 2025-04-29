@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Consent Prompt Example</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    #consentBanner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #333;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+    #consentContent {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    #consentContent span {
+      font-size: 16px;
+    }
+    #consentContent button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    #yesBtn {
+      background-color: #4CAF50;
+      color: white;
+    }
+    #noBtn {
+      background-color: #f44336;
+      color: white;
+    }
+
+    #biltitel{
+    background-color: red;
+    padding-left: 40%;
+    }
+
+    #bilde{
+      padding-left: 20%;
+
+    }
+
+  </style>
+</head>
+<body>
+
+<div id="consentBanner">
+  <div id="consentContent">
+    <span>Do you want this page to track your position?</span>
+    <button id="yesBtn">Yes</button>
+    <button id="noBtn">No</button>
+  </div>
+</div>
+
+<br><br><br><br>
+
+<div id="biltitel">
+    <h1>NY BMW 600 HESTEKREFTER</h1>
+</div>
+
+<div id="bilde">
+    <img src="IMG_2174.jpg" alt="BMW" width="80%">
+</div>
+
+<script>
+  document.getElementById("yesBtn").onclick = function() {
+    document.getElementById("consentBanner").style.display = "none";
+    // navigator.geolocation.getCurrentPosition() could go here
+  };
+
+  document.getElementById("noBtn").onclick = function() {
+    document.getElementById("consentBanner").style.display = "none";
+  };
+</script>
+
+</body>
+</html>
